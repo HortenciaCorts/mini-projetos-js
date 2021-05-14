@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+        body{
+            background-color: thistle;
+            font-family: cursive;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+        }
+        .principal{
+            background-color: white;
+            padding: .2rem;
+            margin: auto;
+            width: 40%;
+            border-radius: 1rem;
+            color: black;
+        }
+        .rodape{
+            color: rgba(0, 0, 0, 0.301);
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Hora do dia</h1>
+    </header>
+    <section class="conteudo">
+        <div class="principal">
+            <h2>Agora são <span class="horas">8</span> horas</h2>
+            <img src="./img/manha.png" alt="" class="imagens">
+        </div>
+    </section>
+        <footer class="rodape">
+            <p>@Hortência Côrtes</p>
+        </footer>
+    <script>
+        //Buscar o valor do HTML
+        let horas = document.querySelector('.horas');
+        //Pegar a Data e Hora do computador
+        let data = new Date();
+        //Especificar somente a hora
+        let horaAtual = data.getHours();
+        horaAtual = 6; //Testando as horas
+        //Mudar a hora do HTML para a hora do computador
+        horas.innerHTML = horaAtual;
+        //Buscar o valor da imagem do HTML
+        let img = document.querySelector('.imagens');
+        //Buscar a div principal
+        let principal = document.querySelector('.principal');
+        //Adicionar uma h2 depois da imagem
+        let saudacao = document.createElement('h2');
+
+        //Condições para saber se é manhã, tarde, noite ou madrugada
+        if(horaAtual >= 6 && horaAtual < 12){
+            //Mudando a imagem para manhã -> Mudando a cor de fundo
+            img.src = 'img/manha.png';
+            saudacao.innerHTML = "Bom dia!";
+            document.body.style.background = "rgb(241, 215, 215)";
+        }
+        if(horaAtual >= 12 && horaAtual < 18){
+            //Mudando a imagem para manhã -> Mudando a cor de fundo
+            img.src = 'img/tarde.png';
+            saudacao.innerHTML = "Boa tarde!";
+            document.body.style.background = "rgb(245, 204, 171)";
+        }
+        if(horaAtual >= 18 && horaAtual <= 23){
+            //Mudando a imagem para manhã -> Mudando a cor de fundo
+            img.src = 'img/noite.png';
+            saudacao.innerHTML = "Boa noite!";
+            document.body.style.background = "rgb(177, 161, 161)";
+        }
+        if(horaAtual >= 00 && horaAtual < 6){
+            //Mudando a imagem para manhã -> Mudando a cor de fundo
+            img.src = 'img/noite.png';
+            saudacao.innerHTML = "Boa madrugada!";
+            document.body.style.background = "rgb(73, 72, 72)";
+        }
+        principal.appendChild(saudacao);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(100, 148, 237, 0.404);
+            text-align: center;
+            font-family: cursive;
+            font-size: 22px;
+        }
+        .conteudo{
+            width: 40%;
+            margin: auto;
+            border-radius: 1rem;
+            padding: .5rem;
+            background-color: rgba(86, 135, 226, 0.404);
+        }
+        button{
+            padding: .5rem;
+            background-color: rgba(255, 255, 255, 0.664);
+        }
+        .res{
+            padding: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>País</h1>
+    </header>
+    <section class="conteudo">
+        <div class="principal">
+            <p>Digite seu País: <input type="text"></p>
+            <button onclick="enviar()">Enviar</button>
+        </div>
+        <div class="res">
+
+        </div>
+    </section>
+    <footer class="rodape">
+        <p>@Hortência Côrtes</p>
+    </footer>
+
+    <script>
+        function enviar(){
+            let input = String(document.querySelector('input').value);
+            let res = document.querySelector('.res');
+            if(input == 'Brasil'){
+                res.innerHTML = `Seu país é ${input}, então você é brasileiro!`;
+            }else if(input != 'Brasil'){
+                res.innerHTML = `Seu país é ${input}, então você é estrangeiro!`;
+            }
+        }
+    </script>
+</body>
+</html>

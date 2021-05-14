@@ -1,0 +1,29 @@
+body {
+    font-family: cursive;
+    font-size: 20px;
+    background-color: rgb(96, 158, 158);
+    text-align: center;
+  }
+.conteudo {
+    width: 400px;
+    margin: auto;
+    background-color: rgba(245, 245, 245, 0.438);
+    border-radius: 5rem;
+}
+input {
+    width: 80px;
+}
+button {
+    border-radius: 5rem;
+    padding: 0.3rem;
+}
+.informacoes{
+    padding: .5rem;
+}
+.resposta{
+    width: 150px;
+    margin: auto;
+    /* background-color: rgba(245, 245, 245, 0.199); */
+    border-radius: 2rem;
+    padding: .5rem;
+}

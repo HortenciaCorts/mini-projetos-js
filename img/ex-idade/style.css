@@ -1,0 +1,39 @@
+body{
+    background-color: thistle;
+    text-align: center;
+    font-family: cursive;
+    font-size: 18px;
+}
+.conteudo{
+    width: 435px;
+    margin: auto;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+.principal{
+    text-align: left;
+}
+label{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.verificar{
+    background-color: thistle;
+    border-radius: 2rem;
+    font-size: 14px;
+    padding: .4rem;
+    margin-bottom: .5rem;
+}
+img{
+    padding-top: .5rem;
+    text-align: center;
+}
+.inputText{
+    border-radius: 5rem;
+    margin-left: .5rem;
+    width: 5rem;
+    text-align: center;
+}

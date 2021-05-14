@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section class="conteudo">
+        <div class="principal">
+            <label for="">Ano de Nascimento:
+                <input type="number" class="inputText">
+            </label>
+            <label for="">Sexo:
+                <input type="radio" id="masc" name="sexo" value="Homem" checked>Masculino
+                <input type="radio" id="fem" name="sexo" value="Mulher">Feminino
+            </label>
+            <button class="verificar" onclick="verificar()">Verificar</button>
+        </div>
+        <div class="informarcoes">
+            <span class="info">Preencha os dados acima para ver o resultado</span>
+        </div>
+    </section>
+    <footer class="rodape">
+        <p>@ Hortência Côrtes</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
